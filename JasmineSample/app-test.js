@@ -90,4 +90,26 @@ describe('add 関数のテスト', function() {
 
   });
 
+  describe("Suite(spyを使ったテスト)", function() {
+
+    it("spec(spyメソッドのテスト)", function() {
+
+      //SetUp - スパイオブジェクト準備
+      let spyObject = {
+        spyMethod: function() {
+          console.log("SpyMethodDone");
+        }
+      }
+      spyOn(spyObject, "spyMethod");
+
+      //Exercise - テスト実行
+      spyObject.spyMethod();
+
+      //Verify - 検証
+      expect(spyObject.spyMethod).toHaveBeenCalled();
+
+    });
+
+  });
+
 });
