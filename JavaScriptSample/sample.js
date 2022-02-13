@@ -33,3 +33,13 @@ class UserB {
   }
 
 }
+
+const userAA = new UserAA();
+const userB = new UserB(2, "UserB", 30);
+
+console.log("1: " + userA.getName()); //○
+console.log("1: " + userA.getName);   //×
+console.log("2: " + userAA.age);
+console.log("3: " + userB.getName);
+userB.setName(40);
+console.log("4: " + userB.getName);
