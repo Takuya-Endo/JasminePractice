@@ -30,6 +30,8 @@ buttonC.onclick = function() {
 
 
 //-----Object-----
+//Javaでいうと、下はクラス定義というよりもクラス作成とインスタンス生成を同時にやるイメージ？
+//「userA」という変数に格納しているから小文字の方が適切
 const UserA = {
   name: "UserA",
   age: 20,
@@ -42,8 +44,34 @@ const UserA = {
     return this.age;
   }
 }
-//メソッド定義時は()不要、実行時は()必要
+//メソッド定義時は()不要、実行時は()必要  これは匿名関数を使う時も共通の法則(57行目)
 console.log(UserA.name);
 console.log(UserA.age);
 UserA.getName();
 UserA.getAge();
+
+UserA.name = "TestA";
+UserA.getName();
+
+//JavaScriptコンストラクタ = Javaクラス
+function User(name, age) {
+  this.name = name;
+  this.age = age;
+  this.getName = function() {
+    console.log(this.name);
+    return this.name;
+  };
+  this.getAge = function() {
+    console.log(this.age);
+    return this.age;
+  };
+}
+//コンストラクタ定義にメソッド定義を包含する為、≒クラスとなる
+let UserB = new User("UserB", 30);
+console.log(UserB.name);
+console.log(UserB.age);
+UserB.getName();
+UserB.getAge();
+
+UserB.name = "TestB";
+UserB.getName();
