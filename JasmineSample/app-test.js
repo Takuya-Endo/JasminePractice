@@ -110,7 +110,16 @@ describe('add 関数のテスト', function() {
 
     });
 
-    
+    it("Spec：spy=メソッドが実行されたかテスト", function() {
+      //SetUp - 対象オブジェクト準備
+      let userA = new User("UserA", 20);
+      //SetUp - 追跡対象オブジェクトとメソッドを設定
+      spyOn(userA, "getName");
+      //Exercise - テスト実行
+      userA.getName();
+      //Verify - 対象メソッドが実行されたか検証
+      expect(userA.getName).toHaveBeenCalled();
+    });
 
   });
 

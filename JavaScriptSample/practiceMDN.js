@@ -65,6 +65,9 @@ function User(name, age) {
     console.log(this.age);
     return this.age;
   };
+  this.setName = function(name) {
+    this.name = name;
+  }
 }
 //コンストラクタ定義にメソッド定義を包含する為、≒クラスとなる
 let UserB = new User("UserB", 30);
@@ -75,3 +78,27 @@ UserB.getAge();
 
 UserB.name = "TestB";
 UserB.getName();
+
+UserB.setName("UserB");
+UserB.getName();
+
+//イベントハンドラ
+const btnAList = document.querySelectorAll("button");
+for (let btnA of btnAList) {
+  btnA.onclick = function() {
+    console.log("ボタンAB");
+  }
+}
+
+const btnC = document.querySelector("#C");
+btnC.onclick = function() {
+  console.log("ボタンC");
+}
+
+const btnDEList = document.querySelectorAll(".DE");
+for (let btnDE of btnDEList) {
+  //アロー関数式
+  btnDE.onclick = () => {
+    console.log("ボタンDE");
+  }
+}
