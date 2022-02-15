@@ -102,3 +102,23 @@ for (let btnDE of btnDEList) {
     console.log("ボタンDE");
   }
 }
+
+const btnF = document.querySelector("#F");
+function logF() {
+  console.log("ボタンF");
+}
+btnF.addEventListener("click", logF); //これなら<button>タグに設定した「onclick」も同時に実行される
+
+const btnGHList = document.querySelectorAll(".GH");
+function logGH() {
+  console.log("ボタンGH");
+}
+for (let btnGH of btnGHList) {
+  btnGH.addEventListener("click", logGH);
+}
+
+const btnI = document.querySelector("#I");
+function logI() {
+  console.log("ボタンI");
+}
+btnI.addEventListener("click", logI); //<button>タグも、class="GH"も、id="I"も、すべて実行される
