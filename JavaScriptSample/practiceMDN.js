@@ -122,3 +122,9 @@ function logI() {
   console.log("ボタンI");
 }
 btnI.addEventListener("click", logI); //<button>タグも、class="GH"も、id="I"も、すべて実行される
+
+//Iと同じ、匿名関数も利用可能
+const btnJ = document.querySelector("#J");
+btnJ.addEventListener("click", function() {
+  console.log("ボタンI");
+});
