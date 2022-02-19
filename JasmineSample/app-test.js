@@ -122,6 +122,14 @@ describe('add 関数のテスト', function() {
     });
 
     // spyON(obj, "method").returnValue(throwError(new Error()));
+    // spyOn(obj, "method").returnValue(throwError(new BaseError(new HttpErrorResponse(
+    //   [
+    //     {
+    //       errors: [{}, {}],
+    //       messages: [{}, {}]
+    //     }
+    //   ]
+    // ))));
 
   });
 
