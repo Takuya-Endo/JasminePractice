@@ -128,3 +128,12 @@ const btnJ = document.querySelector("#J");
 btnJ.addEventListener("click", function() {
   console.log("ボタンI");
 });
+
+//アロー関数式
+let funcA = function() {
+  console.log("funcA");
+}
+//↓
+let funcB = () => {
+  console.log("funcB");
+}
