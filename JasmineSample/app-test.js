@@ -121,8 +121,8 @@ describe('add 関数のテスト', function() {
       expect(userA.getName).toHaveBeenCalled();
     });
 
-    // spyON(obj, "method").returnValue(throwError(new Error()));
-    // spyOn(obj, "method").returnValue(throwError(new BaseError(new HttpErrorResponse(
+    // spyON(obj, "method").and.returnValue(throwError(new Error()));
+    // spyOn(obj, "method").and.returnValue(throwError(new BaseError(new HttpErrorResponse(
     //   [
     //     {
     //       errors: [{}, {}],
