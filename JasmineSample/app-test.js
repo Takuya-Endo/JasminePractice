@@ -130,6 +130,9 @@ describe('add 関数のテスト', function() {
     //     }
     //   ]
     // ))));
+    // staticMethod(tesisu, function() {
+    //   spyOn(obj, "method").and.returnValue(throwError(new Error()));
+    // }, 10)
 
   });
 
