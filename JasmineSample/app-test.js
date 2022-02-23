@@ -130,6 +130,12 @@ describe('add 関数のテスト', function() {
     //     }
     //   ]
     // ))));
+    
+    // const func = function() {
+    //   return obj.method();
+    // }
+    // staticMethod(tesisu, func, 10);
+    // ↓ この処理を書き換える
     // staticMethod(tesisu, function() {
     //   spyOn(obj, "method").and.returnValue(throwError(new Error()));
     // }, 10)
